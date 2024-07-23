@@ -1,0 +1,146 @@
+:root {
+    --text-primary: #333333;
+    --color-primary: #d0121d;
+}
+
+* {
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+/* Nav */
+
+.c-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 3rem 0 0 0;
+}
+
+.c-nav_logo {
+    margin: 10px;
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.c-nav_button {
+    cursor: pointer;
+    height: 50px;
+    padding: 0 1rem;
+    text-decoration: none;
+    border: 0;
+    display: inline-flex;
+    align-items: center;
+    align-content: center;
+    border-radius: 15px;
+    background: white;
+    font-weight: 5600;
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    font-size: 1.2rem;
+}
+
+@media screen and (min-width: 1367px) {
+    .c-nav_logo {
+        width: auto;
+        height: 60px;
+    }
+
+    .cnav_button {
+        font-size: 20px;
+        padding: 20px 18px;
+    }
+}
+
+/* Hero */
+
+.c-hero {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 3em 0 0 0;
+    display: grid;
+    grid-column-gap: 4em;
+    grid-row-gap: 2rem;
+    grid-template-areas:
+        'title img'
+        'sub img'
+        'bg img'
+        'xp img'
+    ;
+    grid-template-rows: 1fr 1fr auto;
+    grid-template-columns: 10fr 10fr;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.c-hero_title {
+    grid-area: title;
+    color: var(--text-primary);
+    font-size: 4.5em;
+    font-weight: 300;
+    line-height: 100%;
+}
+
+.c-hero_subtitle {
+    grid-area: sub;
+    color: var(--text-primary);
+    font-size: 2.5em;
+    font-weight: 300;
+    line-height: 100%;
+}
+
+.c-hero_background {
+    grid-area: bg;
+    color: var(--text-primary);
+    font-size: 1.5em;
+    line-height: 100%;
+    line-height: 2;
+}
+
+.c-hero_experience {
+    grid-area: xp;
+    color: var(--text-primary);
+    font-size: 1.5em;
+    line-height: 100%;
+    line-height: 2;
+}
+
+.c-hero_image {
+    grid-area: img;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 40% bottom;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(80,0,0,0.3);
+}
+
+@media screen and (min-width: 1367px) {
+    .c-hero {
+        font-size: 1.3rem;
+    }
+}
+
+.c-hero_company {
+    display: inline-flex;
+    width: auto;
+    height: 2.3rem;
+    position: relative;
+    flex-direction: column;
+    font-size: inherit;
+    line-height: 100%;    
+    padding: 0.2rem 0.5rem;  
+    background: var(--color-primary);
+    color: white;
+}
