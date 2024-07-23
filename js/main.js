@@ -8,7 +8,8 @@ class Typewriter {
             'Contabilizei',
             'Swap',
             'Localiza',
-            'Senac', 
+            'Senac',
+            'SíndicoNet', 
             'Dale Carnegie',
         ].map(value => ({ value, sort: Math.random() }))
         .sort((a, b) => a.sort - b.sort)
@@ -77,6 +78,6 @@ class Typewriter {
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM is ready!');
 
-    const typist = new Typewriter('[data-typewriter]', 80, 4000)
-    typist.start()    
+    const typist = new Typewriter('[data-typewriter]', 70, 2500)
+    typist.start()
 });
